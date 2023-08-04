@@ -1,0 +1,128 @@
+<html>
+    <head>
+        <style>
+          *{
+            margin:0px;
+          } 
+          .first{
+    
+            height:500px;
+            width:1000px;
+            box-shadow:10px 12px 34px rgb(0, 0, 0);
+     
+            margin-left: 250px;
+            margin-top: 100px;
+          }
+          body{
+           background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.3)), url("https://images.pexels.com/photos/346529/pexels-photo-346529.jpeg?auto=compress&cs=tinysrgb&w=600");
+           background-repeat: no-repeat;
+           background-size: cover;
+          }
+          lable{
+            font-size:30px;
+            color:white;
+          
+          }
+     
+          .image{
+            height:500px;
+            width:500px;
+            background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.5)), url("https://images.pexels.com/photos/346529/pexels-photo-346529.jpeg?auto=compress&cs=tinysrgb&w=600");
+            background-repeat:no-repeat ;
+            background-size: cover;
+            float:left;
+          }
+           #button{
+            height:28px;
+            width:310px;
+            background-color: blue;
+            color:white;
+            font-size:17px;
+          }
+          #button:hover{
+            background-color: grey;
+            color:black;
+          }
+          a{
+            text-decoration: none;
+            color:white;
+            font-size: 20px;
+          }
+          .try1{
+            width:100%
+          }
+          .try1:hover{
+            background-color: blue;
+            color:white;
+          }
+          .for{
+            font-size: 20px;
+          }
+        
+         
+          #msj{
+            color:beige;
+           
+            
+          }
+           
+          </style>
+           <script>
+            function hidemeg(){
+              document.getElementById("msj").style.visibility="hidden";
+            }
+            setTimeout("hidemeg()",4000);
+           </script>
+          </head>
+          <body>
+            <div class="first">
+              <div class="image">
+                <img style="height:100%;width:100%;" src="https://images.unsplash.com/photo-1526657782461-9fe13402a841?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8aG9tZSUyMG9mZmljZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60">
+              </div>
+              <div class="image">
+                <center><h1 style=" background-color:rgba(25, 141, 187, 0.46);color:whitesmoke;">--login--</h1></center><br><br>
+                <center>
+                  
+                    {%if msj%}
+                    <h1 id="msj">{{msj}}</h1>
+                    {%endif%}
+                 \
+                <form action="" method="post">
+                  {%csrf_token%}
+                 
+                  <table cellspacing="14px">
+                    <tr>
+                      <td>
+                        <lable>
+                          E-mail
+                        </lable>
+                      </td>
+                      <td >
+                        <input type="email" placeholder="enter your name" name="email" required style="height:25px;width:170px">
+                      </td></tr>
+                      <tr>
+                        <td>
+                          <lable>
+                            password
+                          </lable>
+                        </td>
+                        <td >
+                          <a class="for" style="margin-left:120px;" href="/forg/">forget</a><br>
+                          <input type="password" placeholder="enter a password" name="password" required style="height:25px;width:170px">
+                        </td>
+                      </tr>
+                    <tr><td colspan="2"><input type="submit" value="login" class="try1"></td></tr>
+                       <tr>
+                      <td colspan="2">
+                      <b style="color:white;">if you don't have any account....<a href="/reg/">register</a></b>
+                     </tr>
+                   </table>
+                </form>
+                               <!-- <a class="foget2"href="/reg/">registration</a>
+       
+                 -->
+              </center>
+              </div> 
+            </div>
+          </body>
+          </html>

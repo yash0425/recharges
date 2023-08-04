@@ -1,0 +1,138 @@
+<html>
+    <head>
+        <style>
+          *{
+            margin:0px;
+        
+          }
+
+          .first{
+            background-color: blue;
+            height:500px;
+            width:1000px;
+            box-shadow:10px 12px 34px rgb(0, 0, 0);
+     
+            margin-left: 250px;
+            margin-top: 100px;
+          }
+          body{
+            background:linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.3)),url("https://images.unsplash.com/photo-1457195740896-7f345efef228?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTB8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60");
+               
+            background-repeat: no-repeat;
+            background-size: cover;
+          }
+          lable{
+            font-size:30px;
+            color:white;
+          }
+     
+          .image{
+            height:500px;
+            width:500px;
+            background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.4)), url("https://images.pexels.com/photos/346529/pexels-photo-346529.jpeg?auto=compress&cs=tinysrgb&w=600");
+            background-repeat: no-repeat;
+            background-size:cover;
+            float:left;
+          }
+           #button{
+            height:28px;
+            width:310px;
+            background-color: black;
+            color:white;
+            font-size:17px;
+          }
+          #button:hover{
+            background-color: grey;
+            color:black;
+          } 
+          #button2{
+            height:40px;
+            width:120px;
+            font-size: 10px;
+            background-color: blue;
+          }
+          #button2:hover{
+            background-color: red;
+            color:white;
+          }
+          a{
+            text-decoration: none;
+            color:white;
+            font-size: 20px;
+          }
+          .try1{
+            width:80%
+          }
+          .try1:hover{
+            background:blue;
+            color:white;
+          }
+         
+            
+          </style>
+          </head>
+          <body>
+            <div class="first">
+              <div class="image">
+                <img style="height:100%;width:100%;" src="https://img.freepik.com/free-vector/successful-purchase-concept-illustration_114360-2652.jpg?size=338&ext=jpg&ga=GA1.2.730567770.1659497907">
+              </div>
+              <div class="image">
+              <center>
+                <h1 style="background-color:rgba(25, 141, 187, 0.69);color:whitesmoke;">
+                  --my offers-
+                </h1>
+              </center>
+             
+              <br>
+              <br>
+              <br>
+              
+              
+              <center>
+                <form >
+                  
+                        <table border=1 cellspacing="10px" style="color:white;">
+                            <tr style="font-size:26px;">
+                                <th>
+                                    sim
+                                </th>
+                                <th>
+                                    amount
+                                </th>
+                                <th>
+                                    data
+                                </th>
+                                <th>
+                                    validity
+                                </th>
+                            </tr>
+                            {%for x in record%}
+                            <tr style="font-size:20px;">
+                                <td>
+                                    {{x.sim_name}}
+                                </td>
+                                <td>
+                                    {{x.amount}}
+                                </td>
+                                <td>
+                                    {{x.data}}
+                                </td>
+                                <td>
+                                    {{x.validity}}
+                                </td>
+                                  <td>
+                                  
+                                        <button id="button2">
+                                          <a href="/rech/{{x.id}}">  recharge </a>
+                                        
+                                        </button>
+                                </td>
+                            </tr>
+                            {%endfor%}
+                        </table>
+                    </form>
+                </center>
+            </div>
+        </div>
+    </body>
+    </html>

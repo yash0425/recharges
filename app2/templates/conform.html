@@ -1,0 +1,99 @@
+<html>
+    <head>
+        <style>
+          *{
+            margin:0px;
+          } 
+          
+          body{
+           background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.3)), url("https://images.pexels.com/photos/346529/pexels-photo-346529.jpeg?auto=compress&cs=tinysrgb&w=600");
+           background-repeat: no-repeat;
+           background-size: cover;
+          }
+          lable{
+            font-size:25px;
+            color:white;
+          
+          }
+     
+          .image{
+            height:330px;
+            width:430px;
+            background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.5)), url("https://images.pexels.com/photos/346529/pexels-photo-346529.jpeg?auto=compress&cs=tinysrgb&w=600");
+            background-repeat:no-repeat ;
+            background-size: cover;
+            border:10px solid white;
+            border-top-left-radius:100px;
+            border-bottom-right-radius:100px;
+            margin-top: 160px;
+          
+          }
+           #button{
+            height:28px;
+            width:310px;
+            background-color: blue;
+            color:white;
+            font-size:17px;
+          }
+          #button:hover{
+            background-color: grey;
+            color:black;
+          }
+          a{
+            text-decoration: none;
+            color:white;
+            font-size: 20px;
+          }
+          .try1{
+            width:100%
+          }
+          .try1:hover{
+            background-color: blue;
+            color:white;
+          }
+          .for{
+            font-size: 20px;
+          }
+          #otp:hover{
+             background-color: rgb(255, 145, 62);
+             color:black;
+          }
+           
+          </style>
+          </head>
+          <body>
+          
+            <center>
+              <div class="image">
+               <br><br>
+            
+                <form action="" method="post">
+                  {%csrf_token%}
+                  <table cellspacing="14px">
+                    <tr>
+                      <td>
+                        <lable>
+                           enter new password
+                        </lable>
+                      </td>
+                      <tr><td>
+                        <input type="text" placeholder="enter your new password" name="password" required style="height:27px;width:320px"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                          <lable>
+                             conform password
+                          </lable>
+                        </td>
+                        <tr><td>
+                          <input type="text" placeholder="conform your password" name="con_password" required style="height:27px;width:320px"></td>
+                      </tr>
+                   
+                          <tr><td colspan="2"><input type="submit" value="done" class="try1"></td></tr>
+                        </table>
+                    </form>
+                </div>
+            </center>
+         
+          </body>
+          </html>

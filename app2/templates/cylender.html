@@ -1,0 +1,107 @@
+<html>
+    <head>
+        <style>
+          *{
+            margin:0px;
+        
+          }
+
+          .first{
+            background-color: blue;
+            height:500px;
+            width:1000px;
+            box-shadow:10px 12px 34px rgb(0, 0, 0);
+     
+            margin-left: 250px;
+            margin-top: 100px;
+          }
+          body{
+            background:linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.3)),url("https://images.unsplash.com/photo-1457195740896-7f345efef228?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTB8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60");
+            background-repeat: no-repeat;
+            background-size: cover;
+          }
+          lable{
+            font-size:30px;
+            color:white;
+          }
+     
+          .image{
+            height:500px;
+            width:500px;
+            background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.4)), url("https://images.pexels.com/photos/346529/pexels-photo-346529.jpeg?auto=compress&cs=tinysrgb&w=600");
+            background-repeat: no-repeat;
+            background-size:cover;
+            float:left;
+          }
+           #button{
+            height:28px;
+            width:310px;
+            background-color: black;
+            color:white;
+            font-size:17px;
+          }
+          #button:hover{
+            background-color: grey;
+            color:black;
+          } 
+          #button2{
+            height:24px;
+            width:70px;
+            font-size: 17px;
+          }
+          #button2:hover{
+            background-color: red;
+            color:white;
+          }
+          a{
+            text-decoration: none;
+            color:white;
+            font-size: 20px;
+          }
+          .try1{
+            width:100%
+          }
+          .try1:hover{
+            background:blue;
+            color:white;
+          }
+          </style>
+          </head>
+          <body>
+            <div class="first">
+              <div class="image">
+                <img style="height:100%;width:100%;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1mEq7yDTDfXt69lHD0QAT5UQJEiNuBDZydg&usqp=CAU">
+              </div>
+              <div class="image">
+              <center>
+                <h1 style="background-color:rgba(25, 141, 187, 0.69);color:whitesmoke;">
+                  --cylender booking-
+                </h1>
+              </center>
+             
+              <br>
+              <br>
+              <br>
+              
+              
+              <center>
+                <form method="post">
+                  {%csrf_token%}
+                    <table cellspacing="6px" >
+                      <tr><td><lable>gas</lable></sim></td><td style="color:white;font-size:28px;"><input type=radio name="gase">HP<input type=radio name="gase"style="margin-left: 20px;">indian</td></tr>
+                      <tr><td><lable>account'holder</lable></td><td><input type=text name="fullname" ></td></tr>
+                       <tr><td><lable>consumer no</lable></td><td><input type=text name="con_num"></td></tr>
+                       <tr><td><lable>mob number</lable></td><td><input type=text name="mob_num" ></td></tr>
+                       <tr><td><lable>amount</lable></td><td><input type=text name="ount"></td></tr>
+                       <tr><td></td><td></td></tr>
+              
+                        <tr><td colspan="2"><input type="submit" value="prosses" class="try1"></td></tr>
+                    </table>
+                 
+                </form>
+              </center>
+            </div>
+          </div>
+
+        </body>
+        </html>

@@ -1,0 +1,188 @@
+<html>
+    <head>
+        <style>
+          *{
+            margin:0px;
+        
+          }
+
+          .first{
+            background-color: blue;
+            height:500px;
+            width:1000px;
+            box-shadow:10px 12px 34px rgb(0, 0, 0);
+     
+            margin-left: 250px;
+            margin-top: 100px;
+          }
+          body{
+            background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.3)), url("https://images.pexels.com/photos/346529/pexels-photo-346529.jpeg?auto=compress&cs=tinysrgb&w=600");
+            background-repeat: no-repeat;
+            background-size: cover;
+          }
+          lable{
+            font-size:30px;
+            color:white;
+          }
+     
+          .image{
+            height:500px;
+            width:500px;
+            background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.5)), url("https://images.pexels.com/photos/346529/pexels-photo-346529.jpeg?auto=compress&cs=tinysrgb&w=600");
+            background-repeat: no-repeat;
+            background-size:cover;
+            float:left;
+          }
+           #button{
+            height:28px;
+            width:310px;
+            background-color: black;
+            color:white;
+            font-size:17px;
+          }
+          #button:hover{
+            background-color: grey;
+            color:black;
+          } 
+          #button2{
+            height:24px;
+            width:70px;
+            font-size: 17px;
+          }
+          #button2:hover{
+            background-color: red;
+            color:white;
+          }
+          a{
+            text-decoration: none;
+            color:white;
+            font-size: 20px;
+          }
+          .try1{
+            width:82%
+          }
+          .try1:hover{
+            background:blue;
+            color:white;
+          }
+          #imgs{
+            height: 20px;
+            width:240px;
+          }
+          #text{
+            color:white
+          }
+          .move{
+            margin-left: 33px;
+          }
+          </style>
+           <script>
+            function hidemeg(){
+              document.getElementById("text").style.visibility="hidden";
+            }
+            setTimeout("hidemeg()",4000);
+           </script>
+          </head>
+          <body>
+            <div class="first">
+              <div class="image">
+                <img style="height:100%;width:100%;" src="https://images.unsplash.com/photo-1526657782461-9fe13402a841?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8aG9tZSUyMG9mZmljZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60">
+              </div>
+              <div class="image">
+              <center>
+                <h1 style="background-color:rgba(25, 141, 187, 0.69);color:whitesmoke;">
+                  --registration form-
+                </h1>
+              </center>
+             
+              <br>
+              <br>
+              <br>
+         
+              
+              <center>
+                <form action="" method="post">
+                  {%csrf_token%}
+                  {%if msj%}
+                 <h1 id="text"> {{msj}}</h1>
+                  
+                  {%endif%}
+                  <table class="move" cellspacing="13px">
+                    <tr>
+                      <td>
+                        <lable>
+                        username
+                        </lable>
+                      </td>
+                      <td>
+                        <input type="text" name="username" placeholder="enter your username" required >
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <lable>
+                          E-mail
+                        </lable>
+                      </td>
+                      <td>
+                        <input type="email" name="Email" placeholder="enter your E-mail" required>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <lable>
+                          contact
+                        </lable>
+                      </td>
+                      <td>
+                        <input type="number" name="contects" placeholder="enter your contact" required>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <lable>
+                          password
+                        </lable>
+                      </td>
+                      <td>
+                        <input type="password" name="passwords" placeholder="make a password" required>
+                      </td>
+                    </tr>
+                     <tr>
+                      <td>
+                        <lable>
+                         Conform password
+                        </lable>
+                      </td>
+                      <td>
+                        <input type="password" name="pass2" placeholder="make a password" required>
+                      </td>
+                    </tr>
+                    
+                    <tr>
+                      <td>
+                        <lable>
+                        image
+                        </lable>
+                      </td>
+                      <td>
+                        <input type="file" name="image" placeholder="upload your image" id="imgs"  >
+                      </td>
+                    </tr>
+                 
+                    <tr>
+                      <td colspan="2">
+                      
+                         <input type="submit" value="register" class="try1">
+                        
+                      </td>
+                    </tr>
+                    
+                  </table>
+                </form>
+              </center>
+            </div>
+          </div>
+
+        </body>
+        </html>
